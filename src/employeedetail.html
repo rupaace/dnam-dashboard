@@ -9,11 +9,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/dist/output.css" />
-    <script
-      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
-      defer
-    ></script>
-    <script src="js/init-alpine.js"></script>
+   
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css"
@@ -740,30 +736,45 @@
           </div>
         </header>
         <main class="h-full pb-16 overflow-y-auto">
-          <div class="container grid px-6 mx-auto">
-            <div class="flex justify-center ">
-            <a href="workorder.html">
-              <h2
-              class="my-6 mx-2 text-lg font-semibold text-gray-700 dark:text-gray-200 border-b-2 border-purple-600"
+          <div class="container grid px-6 mx-auto ">
+
+
+   <div class="flex justify-center task mt-6">
+
+            <div   class="itemed">
+              <h4 data-id="workorder"
+              class="mb-4 text-lg font-semibold text-gray-50 dark:text-gray-300 border-purple-500 border-2 bg-purple-500 p-2 rounded cursor-pointer hover:bg-gray-50 hover:text-purple-500 hover:border-purple-500 mr-4"
             >
-              Work Order
-            </h2>
-          </a>
-          <a href="complaints.html">
-            <h2
-              class="my-6 mx-6 text-lg font-semibold text-gray-700 dark:text-gray-200 border-b-2 border-purple-600"
-            >
-              Complaints
-            </h2>
-          </a>
+           Work Order
+            </h4>
           </div>
+
+          <div  class="itemed"> 
+            <h4 data-id="complaints"
+            class="mb-4 text-lg font-semibold text-gray-50 dark:text-gray-300 border-purple-500 border-2 bg-purple-500 p-2 rounded cursor-pointer hover:bg-gray-50 hover:text-purple-500 hover:border-purple-500 mr-4"
+          >
+         Complaints
+          </h4>
+          </div>
+
+    </div>
+
+
+
+  <div id="workorder" class="content actives w-full mb-8 overflow-hidden rounded-lg shadow-xs ">
           <div class="flex justify-between">
             <h4
               class="mb-4 text-lg font-semibold text-gray-600 dark:text-gray-300"
             >
               Work Order
             </h4>
-
+            <a href="addworkorder.html">
+            <h4
+              class="mb-4 text-lg font-semibold text-gray-50 dark:text-gray-300 border-purple-500 border-2 bg-purple-500 p-2 rounded cursor-pointer hover:bg-gray-50 hover:text-purple-500 hover:border-purple-500 mr-4"
+            >
+            Add Task
+            </h4>
+          </a>
           </div>
             <div class="w-full mb-8 overflow-hidden rounded-lg shadow-xs">
               <div class="w-full overflow-x-auto">
@@ -1115,14 +1126,22 @@
                 </span>
               </div>
             </div>
+   </div>       
 
+   <div id="complaints" class="content w-full mb-8 overflow-hidden rounded-lg shadow-xs">
             <div class="flex justify-between">
               <h4
                 class="mb-4 text-lg font-semibold text-gray-600 dark:text-gray-300 p-2"
               >
                 Complaints
               </h4>
-
+              <a href="addcomplaint.html">
+              <h4
+                class="mb-4 text-lg font-semibold text-gray-50 dark:text-gray-300 border-purple-500 border-2 bg-purple-500 p-2 rounded cursor-pointer hover:bg-gray-50 hover:text-purple-500 hover:border-purple-500 mr-4"
+              >
+              Add Task
+              </h4>
+            </a>
             </div>
             <div class="w-full overflow-hidden rounded-lg shadow-xs">
               <div class="w-full overflow-x-auto">
@@ -1474,9 +1493,22 @@
                 </span>
               </div>
             </div>
+   </div>        
+
+ </div>
+
+
           </div>
         </main>
       </div>
     </div>
+
+
+
+    <script
+    src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+    defer
+  ></script>
+  <script src="js/init-alpine.js"></script>
   </body>
 </html>

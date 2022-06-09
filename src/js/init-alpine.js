@@ -60,3 +60,29 @@ function data() {
     },
   }
 }
+
+
+
+
+
+const about = document.querySelector(".task")
+const btns = document.querySelectorAll(".itemed")
+const articles = document.querySelectorAll(".content")
+
+
+about.addEventListener("click", function (e) {
+  const id = e.target.dataset.id;
+  
+  console.log(id);
+if(id){
+  btns.forEach((btn) => {
+    btn.classList.remove("actives")
+  });
+  e.target.classList.add("actives")
+  articles.forEach((article) => {
+    article.classList.remove("actives")
+  });
+  const yippy = document.getElementById(id)
+  yippy.classList.add("actives")
+}
+});
